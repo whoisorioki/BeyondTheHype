@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+
+
+# services:
+#   app:
+#     container_name: "categorisation_api"
+#     build:
+#       context: .
+#       dockerfile: docker/fast_api/Dockerfile
+#     restart: unless-stopped
+#     env_file:
+#       - .env
+#     volumes:
+#       - ./models:/app/models
+#       - ./packages:/app/packages
+#       - ./vectors:/app/vectors
